@@ -1,0 +1,10 @@
+export function initCopyButtons() {
+  document.addEventListener('click', async event => {
+    const button = event.target.closest('[data-copy]');
+    if (!button) return;
+
+    await navigator.clipboard.writeText(button.dataset.copy);
+    button.classList.add('copied');
+    setTimeout(() => button.classList.remove('copied'), 1500);
+  });
+}

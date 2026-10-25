@@ -1,0 +1,23 @@
+# CurseStone
+
+> CurseStone es un software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x (protocolo 84), escrito en C y C++20 y enfocado en alto rendimiento. Núcleo en C puro para red, NBT y datos de chunks, con la lógica del juego en C++20.
+
+## Proyecto
+
+- [Sitio oficial](https://cursestone.pages.dev/): presentación, contribuidores, redes y documentación
+- [Repositorio en GitHub](https://github.com/CurseStoneTeam/CurseStone): código fuente (rama stable)
+- [Releases](https://github.com/CurseStoneTeam/CurseStone/releases): versiones publicadas
+
+## Documentación
+
+- [Documentación inicial](https://docs-cursestone.readthedocs.io/): guía para empezar
+- [Documentación completa](https://cursestoneteam.github.io/): referencia completa del software
+
+## Web antigua
+
+- [Primera web de CurseStone](https://cursestonesoftware.netlify.app/): sitio original del proyecto, creado por pkz.byt
+
+## Comunidad
+
+- [Discord](https://discord.gg/h6TXynYC8p)
+- [YouTube](https://youtube.com/@CurseStoneTeam)

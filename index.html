@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151618">
+  <meta name="color-scheme" content="dark light">
+
+  <meta name="google-site-verification" content="zwd6rAC6eZCV9gNU2k5FCZ6Sy6HuTo3SUMAZ28JtvF0">
+
+  <title>CurseStone - Minecraft Server Software</title>
+  <meta name="description" content="Discover CurseStone, Minecraft server software. Explore its features, documentation, and development.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cursestone.pages.dev/">
+
+  <!--- Open Graph --->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CurseStone">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://cursestone.pages.dev/">
+  <meta property="og:title" content="CurseStone - Servidor de código abierto para Minecraft PE 0.15.x">
+  <meta property="og:description" content="Software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x escrito en C y C++20. Alto rendimiento, plugins en Lua, documentación y desarrollo.">
+  <meta property="og:image" content="https://socialify.dev/CurseStoneTeam/CurseStone/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FCurseStoneTeam%2FCurseStone%2Fstable%2Flogo.svg&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;pulls=1&amp;stargazers=1&amp;theme=Dark">
+  <meta property="og:image:alt" content="CurseStone, servidor de Minecraft Pocket Edition">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CurseStone - Servidor de código abierto para Minecraft PE 0.15.x">
+  <meta name="twitter:description" content="Servidor de código abierto para Minecraft PE 0.15.x en C y C++20. Alto rendimiento, plugins en Lua y documentación.">
+  <meta name="twitter:image" content="https://socialify.dev/CurseStoneTeam/CurseStone/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FCurseStoneTeam%2FCurseStone%2Fstable%2Flogo.svg&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;pulls=1&amp;stargazers=1&amp;theme=Dark">
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "CurseStone",
+    "description": "Software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x escrito en C y C++20, enfocado en alto rendimiento.",
+    "url": "https://cursestone.pages.dev/",
+    "codeRepository": "https://github.com/CurseStoneTeam/CurseStone",
+    "programmingLanguage": ["C", "C++"],
+    "runtimePlatform": "Linux, macOS, Windows, Android (Termux)",
+    "license": "https://github.com/CurseStoneTeam/CurseStone"
+  }
+  </script>
+
+  <link rel="icon" href="https://raw.githubusercontent.com/CurseStoneTeam/CurseStone/stable/logo.svg" type="image/svg+xml">
+
+  <script src="js/theme-init.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 22px;
+      padding: 24px;
+      text-align: center;
+      color: #212529;
+      background: #fcfcfc;
+      font-family: "Pixelify Sans", "Segoe UI", system-ui, sans-serif;
+      transition: opacity 0.35s, visibility 0.35s;
+    }
+
+    :root[data-theme="dark"] .loader {
+      color: #f1f2f3;
+      background: #151618;
+    }
+
+    .loader.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .loader-mark {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 96px;
+      height: 96px;
+    }
+
+
+    .loader-logo {
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 20px rgba(255, 176, 32, 0.45));
+      animation: loader-spin 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+
+    .loader.no-logo .loader-logo {
+      display: none;
+    }
+
+    @keyframes loader-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader-brand {
+      font-family: "Pixelify Sans", "Segoe UI", system-ui, sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .loader-brand span:last-child {
+      opacity: 0.5;
+    }
+
+    .loader-text {
+      min-height: 1.2em;
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.65;
+    }
+
+    .loader:not(.has-error) .loader-text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    .loader.has-error .loader-mark {
+      display: none;
+    }
+
+    .loader-retry {
+      padding: 11px 24px;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1f1500;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ffe14d, #ff9f1c);
+      border: 1px solid #d98200;
+      border-radius: 4px;
+    }
+
+    .loader-hint {
+      max-width: 420px;
+      margin: 0;
+      font-size: 0.8rem;
+      opacity: 0.55;
+    }
+
+    body.is-loading {
+      overflow: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loader-logo {
+        animation-duration: 4s;
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/contributors.css">
+</head>
+<body class="is-loading">
+  <div id="loader" class="loader" role="status" aria-live="polite" data-state="loading">
+    <div class="loader-mark">
+      <img class="loader-logo" src="https://raw.githubusercontent.com/CurseStoneTeam/CurseStone/stable/logo.svg" alt="" width="84" height="84"
+           onerror="this.closest('.loader').classList.add('no-logo')">
+    </div>
+    <div class="loader-brand"><span>Curse</span><span>Stone</span></div>
+    <p id="loader-text" class="loader-text"></p>
+  </div>
+
+  <nav id="sidebar" class="sidebar"></nav>
+  <div id="nav-scrim" class="nav-scrim"></div>
+
+  <div class="content-wrap">
+    <header class="mobile-bar">
+      <button class="icon-btn" id="menu-toggle" type="button" aria-controls="sidebar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a href="#introduccion" class="mobile-brand">
+        <img class="logo" src="https://raw.githubusercontent.com/CurseStoneTeam/CurseStone/stable/logo.svg" alt="" width="28" height="28" onerror="this.hidden=true">
+        <span><span class="tone-a">Curse</span><span class="tone-b">Stone</span></span>
+      </a>
+    </header>
+
+    <div class="content">
+      <div id="breadcrumbs"></div>
+      <main id="page">
+        <!-- Contenido SEO de respaldo: main.js lo reemplaza por completo (page.innerHTML = ...). -->
+        <article data-seo-fallback>
+          <h1>CurseStone: servidor de código abierto para Minecraft PE 0.15.x</h1>
+          <p>
+            CurseStone es un software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x
+            (protocolo 84), escrito en C y C++20 y enfocado en el alto rendimiento. Tiene un núcleo en C puro
+            para red, NBT y datos de chunks, con la lógica del juego en C++20.
+          </p>
+          <p>
+            Es una opción para ejecutar un servidor MCPE pequeño que puedes leer, compilar y modificar,
+            con documentación y desarrollo abiertos en GitHub.
+          </p>
+
+          <h2>Características principales</h2>
+          <ul>
+            <li><strong>Plugins en Lua:</strong> Lua 5.4 integrado en el binario, sin instalar nada más.</li>
+            <li><strong>Dos formatos de mundo:</strong> anvil (por defecto) y leveldb.</li>
+            <li><strong>Generación de terreno:</strong> biomas, ruido y populators incluidos.</li>
+            <li><strong>Diagnósticos integrados:</strong> profiler en tiempo de ejecución y volcados de fallos.</li>
+            <li><strong>Multiplataforma:</strong> Linux, macOS, Windows y Android (Termux).</li>
+          </ul>
+
+          <h2>Documentación</h2>
+          <p>
+            CurseStone cuenta con dos documentaciones: una
+            <a href="https://docs-cursestone.readthedocs.io/">guía inicial en Read the Docs</a>
+            y la <a href="https://cursestoneteam.github.io/">documentación completa del software</a>.
+          </p>
+
+          <h2>Desarrollo y comunidad</h2>
+          <p>
+            El código fuente está en el <a href="https://github.com/CurseStoneTeam/CurseStone">repositorio de GitHub</a>
+            (rama <code>stable</code>). Puedes abrir issues, enviar pull requests y unirte a la comunidad en
+            <a href="https://discord.gg/h6TXynYC8p">Discord</a> o seguir el proyecto en
+            <a href="https://youtube.com/@CurseStoneTeam">YouTube</a>.
+          </p>
+
+          <nav aria-label="Secciones del sitio">
+            <ul>
+              <li><a href="#introduccion">Introducción</a></li>
+              <li><a href="#contribuidores">Contribuidores</a></li>
+              <li><a href="#redes">Redes del proyecto</a></li>
+              <li><a href="#repositorio">Repositorio</a></li>
+              <li><a href="#documentacion">Documentación</a></li>
+              <li><a href="#web-antigua">Web antigua</a></li>
+            </ul>
+          </nav>
+        </article>
+      </main>
+      <div id="pager"></div>
+      <footer id="footer"></footer>
+    </div>
+  </div>
+
+  <noscript>
+    <style>
+      .loader {
+        display: none;
+      }
+
+      body.is-loading {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
+
+  <script src="js/loader-guard.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
