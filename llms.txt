@@ -5,13 +5,13 @@
 ## Proyecto
 
 - [Sitio oficial](https://cursestone.pages.dev/): presentación, contribuidores, redes y documentación
-- [Repositorio en GitHub](https://github.com/CurseStoneTeam/CurseStone): código fuente (rama stable)
-- [Releases](https://github.com/CurseStoneTeam/CurseStone/releases): versiones publicadas
+- [Repositorio en GitHub](https://github.com/CurseStoneORG/CurseStone): código fuente (rama stable)
+- [Releases](https://github.com/CurseStoneORG/CurseStone/releases): versiones publicadas
 
 ## Documentación
 
-- [Documentación inicial](https://docs-cursestone.readthedocs.io/): guía para empezar
-- [Documentación completa](https://cursestoneteam.github.io/): referencia completa del software
+- [Documentación inicial](https://cursestoneorg.github.io/docs/): guía para empezar
+- [Documentación completa](https://cursestoneorg.github.io/doxygen-docs/): referencia completa del software
 
 ## Web antigua
 

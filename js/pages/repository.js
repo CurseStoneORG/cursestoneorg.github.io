@@ -9,7 +9,7 @@ export default {
   title: () => t('nav.repo'),
 
   render: () => {
-    const org = `<a href="${site.organization}" target="_blank" rel="noopener noreferrer">CurseStoneTeam</a>`;
+    const org = `<a href="${site.organization}" target="_blank" rel="noopener noreferrer">CurseStoneORG</a>`;
 
     return html`
       <h1>${t('repo.title')}</h1>

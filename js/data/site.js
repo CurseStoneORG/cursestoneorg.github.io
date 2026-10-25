@@ -1,15 +1,15 @@
-const ORG_URL = 'https://github.com/CurseStoneTeam';
+const ORG_URL = 'https://github.com/CurseStoneORG';
 const REPO_URL = `${ORG_URL}/CurseStone`;
-const LOGO_URL = 'https://raw.githubusercontent.com/CurseStoneTeam/CurseStone/stable/logo.svg';
+const LOGO_URL = 'https://raw.githubusercontent.com/CurseStoneORG/CurseStone/stable/logo.svg';
 
-const DOCS_FULL = 'https://cursestoneteam.github.io/';
-const DOCS_INITIAL = 'https://docs-cursestone.readthedocs.io/';
+const DOCS_FULL = 'https://cursestoneorg.github.io/doxygen-docs/';
+const DOCS_INITIAL = 'https://cursestoneorg.github.io/docs/';
 const YOUTUBE_URL = 'https://youtube.com/@CurseStoneTeam';
 const DISCORD_URL = 'https://discord.gg/h6TXynYC8p';
 
 function bannerUrl(theme) {
   return (
-    'https://socialify.dev/CurseStoneTeam/CurseStone/image' +
+    'https://socialify.dev/CurseStoneORG/CurseStone/image' +
     '?description=1&font=Inter&forks=1&issues=1' +
     `&logo=${encodeURIComponent(LOGO_URL)}` +
     `&name=1&owner=1&pattern=Transparent&pulls=1&stargazers=1&theme=${theme}`
@@ -55,8 +55,8 @@ export const site = {
   ],
 
   release: {
-    api: 'https://api.github.com/repos/CurseStoneTeam/CurseStone/releases/latest',
-    listApi: 'https://api.github.com/repos/CurseStoneTeam/CurseStone/releases?per_page=100',
+    api: 'https://api.github.com/repos/CurseStoneORG/CurseStone/releases/latest',
+    listApi: 'https://api.github.com/repos/CurseStoneORG/CurseStone/releases?per_page=100',
     cacheKey: 'cursestone-release-v2',
     listCacheKey: 'cursestone-releases-v2',
     ttl: 60 * 60 * 1000,
@@ -64,7 +64,7 @@ export const site = {
   },
 
   contributors: {
-    api: 'https://api.github.com/repos/CurseStoneTeam/CurseStone/contributors?per_page=100',
+    api: 'https://api.github.com/repos/CurseStoneORG/CurseStone/contributors?per_page=100',
     cacheKey: 'cursestone-contributors',
     ttl: 6 * 60 * 60 * 1000,
     retryDelay: 15 * 60 * 1000,
