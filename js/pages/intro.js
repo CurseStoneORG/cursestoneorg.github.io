@@ -122,7 +122,7 @@ export default {
 
     <div class="button-row">
       ${DownloadMenu()}
-      ${Button({ href: site.docs.full, label: t('cta.docs'), icon: 'fa-solid fa-book', size: 'lg' })}
+      ${Button({ href: '#documentacion', label: t('cta.docs'), icon: 'fa-solid fa-book', size: 'lg' })}
     </div>
 
     <figure class="banner">
