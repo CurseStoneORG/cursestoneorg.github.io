@@ -1,5 +1,5 @@
 export default {
-  'meta.description': 'Official CurseStone website: a Minecraft Pocket Edition 0.15.x server with a C core and C++20 game logic.',
+  'meta.description': 'Official CurseStone website: a Minecraft Pocket Edition 0.15.x server written in C++20.',
 
   'nav.label': 'Main navigation',
   'nav.open': 'Open menu',
@@ -10,8 +10,7 @@ export default {
   'nav.docs': 'Documentation',
 
   'intro.spec.target': 'Works with',
-  'intro.spec.core': 'Core',
-  'intro.spec.logic': 'Logic',
+  'intro.spec.language': 'Language',
   'intro.spec.script': 'Scripts',
 
   'nav.releases': 'Releases',
@@ -122,6 +121,17 @@ export default {
   'old.button': 'Open the old website',
 
   'intro.platforms': 'Works on:',
+
+  'intro.news.title': 'New in v1.0.3',
+  'intro.news.lead': 'The highlights of the latest release, published on GitHub.',
+  'intro.news.vanilla': 'Vanilla overworld generator ported from MCPE 1.0.0: rivers that carve their own beds, polished biomes and vanilla plants.',
+  'intro.news.chests': 'Vanilla double chests with 54-slot windows and synchronized co-viewers.',
+  'intro.news.liquids': 'New vanilla liquid flow engine and chunks that arrive with their liquid already settled.',
+  'intro.news.mining': 'Vanilla mining: drops gated by the correct tool and server-checked break speed.',
+  'intro.news.perf': 'Performance: chunk-storm light relights 3x cheaper, lower per-tick cost and fewer allocations.',
+  'intro.news.properties': 'Incomplete or empty server.properties files are completed automatically on boot (great for panels like Pterodactyl).',
+  'intro.news.note': 'Note: naturally generated furnaces are disabled while a crash caused by touching them is investigated, and structures do not spawn chests yet (they will arrive in a future update).',
+  'intro.news.link': 'Read the full v1.0.3 release notes',
 
   'cta.unavailable': 'Not available',
 };

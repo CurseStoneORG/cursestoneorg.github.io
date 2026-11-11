@@ -873,3 +873,27 @@ body.sheet-open {
     margin-left: 0;
   }
 }
+
+/* Novedades de la última versión en la introducción. */
+.intro-news {
+  margin-top: 40px;
+  padding: 20px 22px;
+  background: var(--subtle);
+  border: 1px solid var(--border);
+}
+
+.intro-news h2 {
+  margin-top: 0;
+}
+
+.intro-news-note {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+}
+
+.intro-news + p {
+  margin-top: 18px;
+}

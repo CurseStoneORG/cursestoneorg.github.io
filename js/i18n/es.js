@@ -1,5 +1,5 @@
 export default {
-  'meta.description': 'Sitio oficial de CurseStone: servidor de Minecraft Pocket Edition 0.15.x con núcleo en C y lógica en C++20.',
+  'meta.description': 'Sitio oficial de CurseStone: servidor de Minecraft Pocket Edition 0.15.x escrito en C++20.',
 
   'nav.label': 'Navegación principal',
   'nav.open': 'Abrir menú',
@@ -10,8 +10,7 @@ export default {
   'nav.docs': 'Documentación',
 
   'intro.spec.target': 'Compatible con',
-  'intro.spec.core': 'Núcleo',
-  'intro.spec.logic': 'Lógica',
+  'intro.spec.language': 'Lenguaje',
   'intro.spec.script': 'Scripts',
 
   'nav.releases': 'Releases',
@@ -122,6 +121,17 @@ export default {
   'old.button': 'Abrir la web antigua',
 
   'intro.platforms': 'Funciona en:',
+
+  'intro.news.title': 'Novedades de la v1.0.3',
+  'intro.news.lead': 'Lo más importante de la última versión, publicada en GitHub.',
+  'intro.news.vanilla': 'Generador de mundo principal vanilla portado desde MCPE 1.0.0: ríos que tallan su lecho, biomas repulidos y plantas vanilla.',
+  'intro.news.chests': 'Cofres dobles vanilla con ventanas de 54 espacios y sincronización entre espectadores.',
+  'intro.news.liquids': 'Nuevo motor de flujo de líquidos vanilla y chunks que llegan con el líquido ya asentado.',
+  'intro.news.mining': 'Minado vanilla: drops según la herramienta correcta y velocidad de rotura verificada en el servidor.',
+  'intro.news.perf': 'Rendimiento: relights de luz 3 veces más baratos, menos coste por tick y menos asignaciones.',
+  'intro.news.properties': 'Los server.properties incompletos o vacíos se completan automáticamente al arrancar (ideal para paneles como Pterodactyl).',
+  'intro.news.note': 'Nota: los hornos naturales están desactivados mientras se investiga un crash al tocarlos, y las estructuras todavía no generan cofres (llegarán en una futura actualización).',
+  'intro.news.link': 'Ver las notas completas de la v1.0.3',
 
   'cta.unavailable': 'No disponible',
 };

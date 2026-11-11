@@ -7,10 +7,12 @@ import { Button } from '../components/Button.js';
 
 const SPECS = [
   { key: 'target', value: '0.15.x' },
-  { key: 'core', value: 'C', icon: 'c' },
-  { key: 'logic', value: 'C++20', icon: 'cpp' },
+  { key: 'language', value: 'C++20', icon: 'cpp' },
   { key: 'script', value: 'Lua 5.4', icon: 'lua' },
 ];
+
+// Titulares de la última versión (changelog de v1.0.3).
+const NEWS_KEYS = ['vanilla', 'chests', 'liquids', 'mining', 'perf', 'properties'];
 
 const PLATFORMS = ['windows', 'linux', 'android'];
 
@@ -111,6 +113,19 @@ async function mountDownload(root) {
   });
 }
 
+function News() {
+  return html`
+    <section class="intro-news">
+      <h2>${t('intro.news.title')}</h2>
+      <p class="lead">${t('intro.news.lead')}</p>
+      <ul>
+        ${NEWS_KEYS.map(key => html`<li>${t(`intro.news.${key}`)}</li>`)}
+      </ul>
+      <p class="intro-news-note">${t('intro.news.note')}</p>
+      <p><a href="#releases">${t('intro.news.link')}</a></p>
+    </section>`;
+}
+
 export default {
   id: 'introduccion',
   title: () => t('nav.intro'),
@@ -137,6 +152,8 @@ export default {
     <dl class="spec-row">
       ${SPECS.map(Spec)}
     </dl>
+
+    ${News()}
   `,
 
   mount: mountDownload,
