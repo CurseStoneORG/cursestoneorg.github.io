@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151618">
+  <meta name="color-scheme" content="dark light">
+  <meta name="generator" content="cursestone-releases-generator">
+
+  <title>Release v1.0.2-beta — CurseStone</title>
+  <meta name="description" content="CurseStone v1.0.2 Beta Release Changes since Beta v1.0.1.5. Added - Nether portals and dimension travel between the Overworld and Nether, including portal…">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cursestoneorg.github.io/releases/v1.0.2-beta/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CurseStone">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://cursestoneorg.github.io/releases/v1.0.2-beta/">
+  <meta property="og:title" content="Release v1.0.2-beta — CurseStone">
+  <meta property="og:description" content="CurseStone v1.0.2 Beta Release Changes since Beta v1.0.1.5. Added - Nether portals and dimension travel between the Overworld and Nether, including portal…">
+  <meta property="og:image" content="https://socialify.dev/CurseStoneORG/CurseStone/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FCurseStoneORG%2FCurseStone%2Fstable%2Flogo.svg&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;pulls=1&amp;stargazers=1&amp;theme=Dark">
+  <meta property="og:image:alt" content="CurseStone, servidor de Minecraft Pocket Edition">
+  <meta property="article:published_time" content="2026-10-18T02:40:21Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Release v1.0.2-beta — CurseStone">
+  <meta name="twitter:description" content="CurseStone v1.0.2 Beta Release Changes since Beta v1.0.1.5. Added - Nether portals and dimension travel between the Overworld and Nether, including portal…">
+  <meta name="twitter:image" content="https://socialify.dev/CurseStoneORG/CurseStone/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FCurseStoneORG%2FCurseStone%2Fstable%2Flogo.svg&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;pulls=1&amp;stargazers=1&amp;theme=Dark">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "CurseStone v1.0.2-beta",
+      "softwareVersion": "v1.0.2-beta",
+      "datePublished": "2026-10-18T02:40:21Z",
+      "operatingSystem": "Android, Linux, Windows",
+      "applicationCategory": "Game server software",
+      "description": "CurseStone v1.0.2 Beta Release Changes since Beta v1.0.1.5. Added - Nether portals and dimension travel between the Overworld and Nether, including portal…",
+      "url": "https://cursestoneorg.github.io/releases/v1.0.2-beta/",
+      "downloadUrl": "https://github.com/CurseStoneORG/CurseStone/releases/tag/v1.0.2-beta",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CurseStone Team",
+        "url": "https://cursestoneorg.github.io/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "CurseStone",
+          "item": "https://cursestoneorg.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Releases",
+          "item": "https://cursestoneorg.github.io/releases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "v1.0.2-beta"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" href="https://raw.githubusercontent.com/CurseStoneORG/CurseStone/stable/logo.svg" type="image/svg+xml">
+
+  <script src="/js/theme-init.js"></script>
+
+  <link rel="preload" href="/fonts/Minecraft.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Minecraft-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <style>
+  .static-shell { max-width: 880px; margin: 0 auto; padding: 28px 20px 48px; }
+  .static-header { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+  .static-header img { width: 30px; height: 30px; object-fit: contain; }
+  .static-brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head);
+    font-weight: 700; font-size: 1.15rem; color: var(--heading); text-decoration: none; }
+  .static-brand:hover { color: var(--heading); }
+  .static-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    gap: 12px; margin: 18px 0 30px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem;
+    color: var(--muted); text-decoration: none; }
+  .back-link:hover { color: var(--link); }
+  .release-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 4px; }
+  .release-head .release-version { font-size: 1.8rem; }
+  .release-date { color: var(--muted); margin: 0 0 26px; }
+  a.release-tile { text-decoration: none; }  /* Igual que la versión botón de la SPA. */
+  .static-footer { margin-top: 44px; font-size: 0.82rem; color: var(--muted); }
+  .static-footer p { margin: 0; }
+</style>
+</head>
+<body>
+  <div class="static-shell">
+    <header class="static-header">
+      <a class="static-brand" href="/">
+        <img src="https://raw.githubusercontent.com/CurseStoneORG/CurseStone/stable/logo.svg" alt="" width="30" height="30" onerror="this.hidden=true">
+        <span><span class="tone-a">Curse</span><span class="tone-b">Stone</span></span>
+      </a>
+    </header>
+
+
+    <header class="static-top">
+      <a class="back-link" href="/releases/"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.78 3.22a.75.75 0 0 1 0 1.06L6.06 8l3.72 3.72a.75.75 0 1 1-1.06 1.06L4.44 8.53a.75.75 0 0 1 0-1.06l4.28-4.25a.75.75 0 0 1 1.06 0z"/></svg> Releases</a>
+      <a class="btn" href="https://github.com/CurseStoneORG/CurseStone/releases/tag/v1.0.2-beta" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> Ver en GitHub</a>
+    </header>
+
+    <article>
+      <h1 class="release-head"><span class="release-version">v1.0.2-beta</span></h1>
+      <p class="release-date">Publicada el 18 de octubre de 2026 · 36 descargas</p>
+
+    <h2>Archivos</h2>
+    <ul class="release-assets">
+      <li><a class="release-asset" href="https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.2-beta/CurseStone-v1.0.2-beta-android-arm64.zip" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
+        <span class="release-asset-name">CurseStone-v1.0.2-beta-android-arm64.zip</span>
+        <span class="release-asset-meta">10,9 MB · 26 descargas</span>
+      </a></li>
+      <li><a class="release-asset" href="https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.2-beta/CurseStone-v1.0.2-beta-linux-x86_64.zip" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
+        <span class="release-asset-name">CurseStone-v1.0.2-beta-linux-x86_64.zip</span>
+        <span class="release-asset-meta">1,5 MB · 6 descargas</span>
+      </a></li>
+      <li><a class="release-asset" href="https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.2-beta/CurseStone-v1.0.2-beta-windows-x86_64.zip" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"/></svg>
+        <span class="release-asset-name">CurseStone-v1.0.2-beta-windows-x86_64.zip</span>
+        <span class="release-asset-meta">807,5 KB · 4 descargas</span>
+      </a></li>
+    </ul>
+      <h2>Notas de la versión</h2>
+      <div class="md"><h2>CurseStone v1.0.2 Beta Release</h2>
+<p>Changes since Beta v1.0.1.5.</p>
+<h4>Added</h4>
+<ul>
+<li>Nether portals and dimension travel between the Overworld and Nether, including portal activation, persistent portal linking, coordinate conversion, and dimension switching.</li>
+<li>Multiworld support with world loading, unloading, lookup, independent ticking, autosaving, and shutdown saving.</li>
+<li>Nether terrain generation with bedrock boundaries, glowstone clusters, and fire placement.</li>
+<li>Vanilla beds with two-part placement, sleeping animations, player synchronization, bed-based spawn points, and nighttime skipping when all players in a world are asleep.</li>
+<li>Hunger and food systems with saturation, exhaustion, regeneration, starvation, and persistent player data.</li>
+<li>New foods: baked potato, beetroot, beetroot soup, raw and cooked fish, raw and cooked mutton, raw and cooked rabbit, rabbit stew, cookie, pumpkin pie, golden carrot, enchanted golden apple, rotten flesh, and spider eye.</li>
+<li>Drinkable potions, throwable splash potions, projectile collisions, shatter effects, and area-based effect application.</li>
+<li>23 status effects: Speed, Slowness, Haste, Mining Fatigue, Strength, Instant Health, Instant Damage, Jump Boost, Nausea, Regeneration, Resistance, Fire Resistance, Water Breathing, Invisibility, Blindness, Night Vision, Hunger, Weakness, Poison, Wither, Health Boost, Absorption, and Saturation.</li>
+<li>Milk buckets that remove active status effects and leave an empty bucket.</li>
+<li>Bow drawing, release handling, arrow flight, projectile collisions, pickup, and despawning.</li>
+<li>Falling-block physics for sand, gravel, and anvils, including landing behavior and block restoration.</li>
+<li>Custom item names and NBT preservation across inventories, equipment, containers, and dropped-item entities.</li>
+<li>Expanded Lua plugin API with world management, player manipulation, plugin resource access, and additional player, entity, bed, door, and interaction events.</li>
+<li>Lua command overrides with automatic restoration of built-in commands when plugins unload.</li>
+<li>Lua plugin execution limits, per-call time limits, and automatic disabling after consecutive errors.</li>
+<li>Added <code>/kill &lt;player&gt;</code> and the operator-only <code>/status</code> command with TPS, memory, uptime, player count, plugin count, and world diagnostics.</li>
+<li>First-run setup wizard for server settings, world configuration, and game defaults.</li>
+<li>Embedded default configuration templates in the executable.</li>
+<li>Added <code>start.sh</code> for Linux and Termux and <code>start.bat</code> for Windows, with automatic restarts after unexpected exits.</li>
+<li>Windows x86-64 build support and platform-specific release archives.</li>
+<li>Doxygen documentation generation and automated publishing.</li>
+<li>Development guidelines, code-formatting rules, and project documentation.</li>
+</ul>
+<h4>Changed</h4>
+<ul>
+<li>Separated basic configuration in <code>server.properties</code> from advanced configuration in <code>cursestone.yml</code>.</li>
+<li>Moved plugin data storage to the server-root <code>data_pl/</code> directory.</li>
+<li>Standardized the server and plugin API version through <code>CURSESTONE_API</code>, set to <code>1.0.2</code>.</li>
+<li>Improved player damage handling for creative mode, environmental damage, armor, resistance, strength, weakness, and absorption.</li>
+<li>Improved multiplayer synchronization for health, hunger, food consumption, equipment, item use, bows, arrows, knockback, death, respawning, and item pickup.</li>
+<li>Improved door sounds, bed synchronization, and nighttime handling.</li>
+<li>Improved player NBT persistence for health, hunger, saturation, exhaustion, active effects, and bed spawn positions.</li>
+<li>Optimized incremental chunk autosaving with a shared per-tick budget across loaded worlds.</li>
+<li>Added UTF-16 support and improved normalization when reading <code>ops.txt</code>.</li>
+<li>Improved item-stack validation and maximum stack-size enforcement.</li>
+<li>Improved Windows portability through MSVC compatibility fixes, POSIX shims, threading support, and static zlib and LevelDB linking.</li>
+<li>Standardized source formatting and comments, reorganized source files, and removed obsolete empty source stubs and outdated test utilities.</li>
+</ul>
+<h4>Fixed</h4>
+<ul>
+<li>Fixed Nether portal frame detection, ignition, metadata, portal linking, and dimension travel.</li>
+<li>Fixed beds and doors becoming ghost blocks or failing to synchronize correctly.</li>
+<li>Fixed bed sleeping animations and sleep data not being delivered correctly to the local player.</li>
+<li>Fixed chunk streaming issues that prevented the full view distance from loading correctly.</li>
+<li>Fixed login and spawn packet ordering to improve initial chunk delivery.</li>
+<li>Fixed falling blocks using an incorrect network entity ID that prevented proper client rendering.</li>
+<li>Fixed fire interactions, environmental damage, and fall-damage handling.</li>
+<li>Fixed splash potion rendering, shatter effects, and status-effect delivery on MCPE 0.15.10.</li>
+<li>Fixed food consumption, milk usage, health updates, and hunger synchronization in multiplayer.</li>
+<li>Fixed bow animations, arrow spawning, projectile movement, and release behavior in multiplayer.</li>
+<li>Fixed dropped items remaining visible after pickup and improved item synchronization between players.</li>
+<li>Fixed inventory duplication, invalid stack sizes, and merging of items with different NBT data.</li>
+<li>Fixed custom item names and NBT data being lost during inventory, container, equipment, and death-drop operations.</li>
+<li>Fixed player death and respawn handling.</li>
+<li>Fixed chest block-event packet handling.</li>
+<li>Fixed plugin event bindings and message handling.</li>
+<li>Fixed operator-list parsing on Android, including UTF-16 files and inconsistent entry formatting.</li>
+<li>Fixed Windows compilation and release packaging issues involving MSVC, POSIX compatibility, <code>ssize_t</code>, math constants, logger threading, and artifact paths.</li>
+<li>Fixed startup configuration defaults and behavior when configuration files are missing.</li>
+</ul>
+<h4>Notes</h4>
+<ul>
+<li>Compared against Beta v1.0.1.5.</li>
+<li>Target client: Minecraft: Pocket Edition 0.15.x.</li>
+<li>Network protocol: 84.</li>
+<li>The project remains server software and does not implement every vanilla Minecraft mechanic.</li>
+<li>Some features may require additional in-game testing to verify complete client compatibility.</li>
+</ul></div>
+    </article>
+
+    <footer class="static-footer">
+      <p>© 2026 CurseStone Team · <a href="/">Sitio principal</a> · <a href="https://github.com/CurseStoneORG/CurseStone" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+[
+  {
+    "tag": "CurseStone-Obsidian-Alpha-v1.0.0",
+    "name": "CurseStone-Obsidian-Alpha-v1.0.0",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/CurseStone-Obsidian-Alpha-v1.0.0",
+    "publishedAt": "2026-10-02T02:45:04Z",
+    "prerelease": false,
+    "notes": "Primera release beta alpha del software, Aun no se puede usar para produccion",
+    "assets": [
+      {
+        "name": "CurseStone-CurseStone-Obsidian-Alpha-v1.0.0-android-arm64",
+        "size": 26507176,
+        "downloads": 2,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-Obsidian-Alpha-v1.0.0/CurseStone-CurseStone-Obsidian-Alpha-v1.0.0-android-arm64"
+      },
+      {
+        "name": "CurseStone-CurseStone-Obsidian-Alpha-v1.0.0-linux-x86_64",
+        "size": 1938000,
+        "downloads": 3,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-Obsidian-Alpha-v1.0.0/CurseStone-CurseStone-Obsidian-Alpha-v1.0.0-linux-x86_64"
+      }
+    ]
+  },
+  {
+    "tag": "CurseStone-beta-v1.0.1",
+    "name": "CurseStone-beta-v1.0.1",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/CurseStone-beta-v1.0.1",
+    "publishedAt": "2026-10-13T11:23:24Z",
+    "prerelease": false,
+    "notes": "# Changelog  ## v1.0.1  ### Added - Lua 5.4 plugin system (manifest, Lua runtime and bindings, built-in YAML and JSON parsers). Lua is bundled and compiled into the binary. - /plugins command. - Plugin API version constant (1.0.1). - Permission nodes for commands, checked before a command runs. - Dynamic /help built from the real command registry, paginated and filtered by permission. - Ops get the cursestone.* permissions by default. - New biomes: Beach, Ice Plains, Jungle, Savanna, Swamp, Taiga, Plains Plateau. - Vanilla-style noise, cave carver and lake generator. - New tree types: oak, big oak, birch, spruce, dark oak, acacia, jungle, big jungle, swamp. - Villages and desert temples. - Hunger and environmental damage (fall, lava, fire, cactus, drowning, starvation) through EntityDamageEvent. - Health and hunger sync to the client. - Sneak and sprint poses shown to other players. - Respawn action and default skin for clients that send none. - Torches and lava emit light. - Furnace lit and unlit block states. - Chests keep their contents between close and reopen. - Block entities for chests and furnaces that come with generated structures (TileFactory). - ItemNbt: shared item to NBT conversion. - Physics engine with swept AABB movement and ray tracing (HitResult). - Diagnostics recorder with richer crash dumps and error reports. - Packet handler errors write a diagnostics report and kick the player with the error. - build_local.sh to build without CMake. - 38 standalone checks and benchmarks in tools/. - License header on all source files.  ### Changed - Renamed Level to World across the code (src/level to src/world, Level to World, level events to world events). - Config keys renamed: level-name, level-seed, level-format are now world-name, world-seed, world-format. The level: section in cursestone.yml is now world:. The old names are no longer read. - main.cpp and main.h renamed to CurseStone.cpp and CurseStone.h. - Software version and plugin API version set to 1.0.1. - Player.cpp split into modules under src/player/. - Crafting recipes and creative items are now registered in code instead of loaded from JSON. - Server tick now sleeps to a fixed schedule instead of a fixed delay per tick. - Nether generation uses the new noise implementation. - Default RakNet MTU lowered to 1400. - Chunk streaming limited per tick. - README.md and CONTRIBUTING.md rewritten.  ### Fixed - RakNet: reliable messages could be delivered twice on lossy connections. - RakNet: clients that reuse a reliable message index no longer lose their handshake and login. - RakNet: Open Connection Request 2 accepts both address layouts. - RakNet: refused handshake packets are now logged. - RakNet: one stalled client no longer drops other players (in-flight limit, global retransmit budget, retransmit backoff, server keepalive). - RakNet: AFK players are no longer kicked by the timeout. - RakNet: larger UDP socket buffers to avoid false timeouts. - LoginPacket parsing failure on Linux builds. - TakeItemEntityPacket wrote its packet ID twice. - UpdateBlockPacket packs block data and flags into one byte. - PlayerListPacket sends skin ID and skin data. - PlayerActionPacket sprint toggle IDs. - Crash when a sign had blank lines (empty NBT strings returned null). - Out-of-bounds write when setting sign lines. - Autosave freeze of 500 to 760 ms on the main thread.  ### Removed - resources/recipes.json, resources/creativeitems.json, resources/biome_definitions.json. - src/level/ (moved to src/world/). - SimplexNoise. - main.cpp and main.h. - Hard-coded command table in /help.",
+    "assets": [
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1-android-arm64",
+        "size": 39397424,
+        "downloads": 2,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1/CurseStone-CurseStone-beta-v1.0.1-android-arm64"
+      },
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1-linux-x86_64",
+        "size": 3713376,
+        "downloads": 1,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1/CurseStone-CurseStone-beta-v1.0.1-linux-x86_64"
+      }
+    ]
+  },
+  {
+    "tag": "CurseStone-beta-v1.0.1.5",
+    "name": "CurseStone-beta-v1.0.1.5",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/CurseStone-beta-v1.0.1.5",
+    "publishedAt": "2026-10-13T13:14:14Z",
+    "prerelease": false,
+    "notes": "Fix: Crash that it couldn't be applied to release 1.0.1, I forgot lol ",
+    "assets": [
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1.5-android-arm64",
+        "size": 39398096,
+        "downloads": 16,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1.5/CurseStone-CurseStone-beta-v1.0.1.5-android-arm64"
+      },
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1.5-linux-x86_64",
+        "size": 3713896,
+        "downloads": 3,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1.5/CurseStone-CurseStone-beta-v1.0.1.5-linux-x86_64"
+      }
+    ]
+  },
+  {
+    "tag": "CurseStone-beta-v1.0.1.6",
+    "name": "CurseStone-beta-v1.0.1.6",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/CurseStone-beta-v1.0.1.6",
+    "publishedAt": "2026-10-14T23:15:31Z",
+    "prerelease": true,
+    "notes": "Released binaries for windows,minor fixes and additions",
+    "assets": [
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1.6-android-arm64",
+        "size": 41792344,
+        "downloads": 1,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1.6/CurseStone-CurseStone-beta-v1.0.1.6-android-arm64"
+      },
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1.6-linux-x86_64",
+        "size": 3940568,
+        "downloads": 1,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1.6/CurseStone-CurseStone-beta-v1.0.1.6-linux-x86_64"
+      },
+      {
+        "name": "CurseStone-CurseStone-beta-v1.0.1.6-windows-x86_64.exe",
+        "size": 2601472,
+        "downloads": 3,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/CurseStone-beta-v1.0.1.6/CurseStone-CurseStone-beta-v1.0.1.6-windows-x86_64.exe"
+      }
+    ]
+  },
+  {
+    "tag": "beta-v1.0.1.7",
+    "name": "beta-v1.0.1.7",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/beta-v1.0.1.7",
+    "publishedAt": "2026-10-15T13:59:37Z",
+    "prerelease": true,
+    "notes": "## CurseStone beta v1.0.1.7  Windows binaries are now fully self-contained — no more \"z.dll not found\" errors.  ### Added - Falling block physics (sand/gravel style entities). - Platform-specific startup scripts (`start.bat` / `start.sh`) bundled with the binaries.  ### Fixed - **Windows builds no longer require zlib1.dll**: zlib and LevelDB are now linked statically into `CurseStone.exe`, so the executable runs on any clean Windows machine. - Bow mechanics: arrow motion is now synced and drawing while aiming at a block works. - Bed sleeping: full rework — sleeping UI, night sleeping mechanics, sleep data sent to self using runtime ID, ghost bed/door states, and block resync after use. - Door sounds and Lua interaction events. - Bed sleeping UI metadata encoding for protocol 84. - Custom item NBT persistence.  ### Changed - Async chunk autosaving is faster and no longer stalls the main thread. - Server configuration is now split into `server.properties` and `cursestone.yml` with fixed embedded defaults; `data_pl` moved to the repo root.  ### CI - Release binaries are packaged into per-platform ZIPs (`linux-x86_64`, `android-arm64`, `windows-x86_64`). - Windows CI builds zlib/LevelDB statically (`x64-windows-static-md`).  ---  **Downloads:** extract the ZIP for your platform and run `start.bat` (Windows) or `start.sh` (Linux/Android). The Windows executable is standalone — no extra DLLs needed.",
+    "assets": [
+      {
+        "name": "CurseStone-beta-v1.0.1.7-android-arm64.zip",
+        "size": 10763998,
+        "downloads": 1,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/beta-v1.0.1.7/CurseStone-beta-v1.0.1.7-android-arm64.zip"
+      },
+      {
+        "name": "CurseStone-beta-v1.0.1.7-linux-x86_64.zip",
+        "size": 1489047,
+        "downloads": 1,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/beta-v1.0.1.7/CurseStone-beta-v1.0.1.7-linux-x86_64.zip"
+      },
+      {
+        "name": "CurseStone-beta-v1.0.1.7-windows-x86_64.zip",
+        "size": 788122,
+        "downloads": 1,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/beta-v1.0.1.7/CurseStone-beta-v1.0.1.7-windows-x86_64.zip"
+      }
+    ]
+  },
+  {
+    "tag": "v1.0.2-beta",
+    "name": "v1.0.2-beta",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/v1.0.2-beta",
+    "publishedAt": "2026-10-18T02:40:21Z",
+    "prerelease": false,
+    "notes": "# CurseStone v1.0.2 Beta Release\n\nChanges since Beta v1.0.1.5.\n\n### Added\n\n- Nether portals and dimension travel between the Overworld and Nether, including portal activation, persistent portal linking, coordinate conversion, and dimension switching.\n- Multiworld support with world loading, unloading, lookup, independent ticking, autosaving, and shutdown saving.\n- Nether terrain generation with bedrock boundaries, glowstone clusters, and fire placement.\n- Vanilla beds with two-part placement, sleeping animations, player synchronization, bed-based spawn points, and nighttime skipping when all players in a world are asleep.\n- Hunger and food systems with saturation, exhaustion, regeneration, starvation, and persistent player data.\n- New foods: baked potato, beetroot, beetroot soup, raw and cooked fish, raw and cooked mutton, raw and cooked rabbit, rabbit stew, cookie, pumpkin pie, golden carrot, enchanted golden apple, rotten flesh, and spider eye.\n- Drinkable potions, throwable splash potions, projectile collisions, shatter effects, and area-based effect application.\n- 23 status effects: Speed, Slowness, Haste, Mining Fatigue, Strength, Instant Health, Instant Damage, Jump Boost, Nausea, Regeneration, Resistance, Fire Resistance, Water Breathing, Invisibility, Blindness, Night Vision, Hunger, Weakness, Poison, Wither, Health Boost, Absorption, and Saturation.\n- Milk buckets that remove active status effects and leave an empty bucket.\n- Bow drawing, release handling, arrow flight, projectile collisions, pickup, and despawning.\n- Falling-block physics for sand, gravel, and anvils, including landing behavior and block restoration.\n- Custom item names and NBT preservation across inventories, equipment, containers, and dropped-item entities.\n- Expanded Lua plugin API with world management, player manipulation, plugin resource access, and additional player, entity, bed, door, and interaction events.\n- Lua command overrides with automatic restoration of built-in commands when plugins unload.\n- Lua plugin execution limits, per-call time limits, and automatic disabling after consecutive errors.\n- Added `/kill <player>` and the operator-only `/status` command with TPS, memory, uptime, player count, plugin count, and world diagnostics.\n- First-run setup wizard for server settings, world configuration, and game defaults.\n- Embedded default configuration templates in the executable.\n- Added `start.sh` for Linux and Termux and `start.bat` for Windows, with automatic restarts after unexpected exits.\n- Windows x86-64 build support and platform-specific release archives.\n- Doxygen documentation generation and automated publishing.\n- Development guidelines, code-formatting rules, and project documentation.\n\n### Changed\n\n- Separated basic configuration in `server.properties` from advanced configuration in `cursestone.yml`.\n- Moved plugin data storage to the server-root `data_pl/` directory.\n- Standardized the server and plugin API version through `CURSESTONE_API`, set to `1.0.2`.\n- Improved player damage handling for creative mode, environmental damage, armor, resistance, strength, weakness, and absorption.\n- Improved multiplayer synchronization for health, hunger, food consumption, equipment, item use, bows, arrows, knockback, death, respawning, and item pickup.\n- Improved door sounds, bed synchronization, and nighttime handling.\n- Improved player NBT persistence for health, hunger, saturation, exhaustion, active effects, and bed spawn positions.\n- Optimized incremental chunk autosaving with a shared per-tick budget across loaded worlds.\n- Added UTF-16 support and improved normalization when reading `ops.txt`.\n- Improved item-stack validation and maximum stack-size enforcement.\n- Improved Windows portability through MSVC compatibility fixes, POSIX shims, threading support, and static zlib and LevelDB linking.\n- Standardized source formatting and comments, reorganized source files, and removed obsolete empty source stubs and outdated test utilities.\n\n### Fixed\n\n- Fixed Nether portal frame detection, ignition, metadata, portal linking, and dimension travel.\n- Fixed beds and doors becoming ghost blocks or failing to synchronize correctly.\n- Fixed bed sleeping animations and sleep data not being delivered correctly to the local player.\n- Fixed chunk streaming issues that prevented the full view distance from loading correctly.\n- Fixed login and spawn packet ordering to improve initial chunk delivery.\n- Fixed falling blocks using an incorrect network entity ID that prevented proper client rendering.\n- Fixed fire interactions, environmental damage, and fall-damage handling.\n- Fixed splash potion rendering, shatter effects, and status-effect delivery on MCPE 0.15.10.\n- Fixed food consumption, milk usage, health updates, and hunger synchronization in multiplayer.\n- Fixed bow animations, arrow spawning, projectile movement, and release behavior in multiplayer.\n- Fixed dropped items remaining visible after pickup and improved item synchronization between players.\n- Fixed inventory duplication, invalid stack sizes, and merging of items with different NBT data.\n- Fixed custom item names and NBT data being lost during inventory, container, equipment, and death-drop operations.\n- Fixed player death and respawn handling.\n- Fixed chest block-event packet handling.\n- Fixed plugin event bindings and message handling.\n- Fixed operator-list parsing on Android, including UTF-16 files and inconsistent entry formatting.\n- Fixed Windows compilation and release packaging issues involving MSVC, POSIX compatibility, `ssize_t`, math constants, logger threading, and artifact paths.\n- Fixed startup configuration defaults and behavior when configuration files are missing.\n\n### Notes\n\n- Compared against Beta v1.0.1.5.\n- Target client: Minecraft: Pocket Edition 0.15.x.\n- Network protocol: 84.\n- The project remains server software and does not implement every vanilla Minecraft mechanic.\n- Some features may require additional in-game testing to verify complete client compatibility.",
+    "assets": [
+      {
+        "name": "CurseStone-v1.0.2-beta-android-arm64.zip",
+        "size": 11390626,
+        "downloads": 26,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.2-beta/CurseStone-v1.0.2-beta-android-arm64.zip"
+      },
+      {
+        "name": "CurseStone-v1.0.2-beta-linux-x86_64.zip",
+        "size": 1576128,
+        "downloads": 6,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.2-beta/CurseStone-v1.0.2-beta-linux-x86_64.zip"
+      },
+      {
+        "name": "CurseStone-v1.0.2-beta-windows-x86_64.zip",
+        "size": 826911,
+        "downloads": 4,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.2-beta/CurseStone-v1.0.2-beta-windows-x86_64.zip"
+      }
+    ]
+  },
+  {
+    "tag": "v1.0.3-beta",
+    "name": "v1.0.3-beta",
+    "url": "https://github.com/CurseStoneORG/CurseStone/releases/tag/v1.0.3-beta",
+    "publishedAt": "2026-11-10T03:44:15Z",
+    "prerelease": false,
+    "notes": "# CurseStone v1.0.3 Beta Release\n\nChanges since Beta v1.0.2.\n\n### Added\n- Ported the vanilla MCPE 1.0.0 overworld generator and removed the old generator: sturdy biome layout, natural terrain relief, vanilla plant survival rules, and the extreme-hills grass tint.\n- Vanilla-style rivers that carve their own beds and valleys, including the highland river drop, and mesa surfaces painted with hardened clay and colored bands.\n- Vanilla double chests with 54-slot container windows, synchronized co-viewers, and per-half item drops when broken.\n- The landing dust and sprint particle effects that the 0.15 client never rendered.\n- Complete client-facing entity metadata and experience (XP) synchronization.\n- Linux ARM64 (Cobalt 100) build support and release packaging, alongside the existing Linux x86-64, Android ARM64, and Windows x86-64 archives.\n- A configurable server list name in `cursestone.yml`.\n- A client-lost report written when a session dies without a clean disconnect, easing network diagnostics.\n- The per-tick light drain cost shown in the `/status` diagnostics output.\n- `cursestone-bot`, a real-shaped protocol-84 test client used to exercise login, chunk streaming, containers, and furnace interaction end-to-end, including a scenario where the bot taps a natural village furnace.\n- A RakLib session use-after-free investigation report and a native-C++ architecture audit document.\n- A new project logo.\n\n### Changed\n- Disabled furnace generation in the vanilla world generator while a crash triggered by touching a naturally generated furnace is investigated.\n- Reworked world generation polish: wide vanilla rivers, consistent surface-depth noise sampled in world block coordinates so terrain matches across chunk borders, and each populate step now works on a private 3x3 neighborhood copy.\n- Ported the vanilla 1.0.0 liquid flow engine: generated water and lava are shipped settled, saved still liquids wake correctly when their chunk loads, and update storms near water are gone.\n- Streamed chunks smoothly with bounded per-tick work, and re-sent chunks the client drops when its render radius changes.\n- Updated the generator heightmap incrementally on block writes instead of rebuilding it.\n- Made mining vanilla: drops are gated by the correct tool and break speed is verified server-side.\n- Migrated the first-party C layer to native C++: NBT is now a native class API with zero C linkage, RAII handles guard C-boundary buffers and NBT tags, the light engine queries the Block registry directly, and RakLib sessions are indexed in O(1).\n- Made chunk-storm light relights 3x cheaper with identical results, cut per-populate allocations and structure rescans, reduced tick-thread costs in chunk streaming and batching, encoded chat once per broadcast with a chat rate limit, and queued congestion-refused payloads.\n- Furnace progress is now streamed only while the fire burns, and tile NBT re-sends were dropped from the container-open batch.\n- Gated all console debug output behind debug-mode.\n- Shipped debug-symbol binaries with symbolized crash backtraces and removed always-on session dumps.\n- Hardened memory lifecycle, allocation bounds, and shutdown ordering.\n- Updated the server and plugin API version through `CURSESTONE_API`, set to `1.0.3`.\n- Normalized every file header to the CurseStone banner, translated comments and log lines to English, revised the README, and removed 152 never-included headers, dead transport packets, unspawned mobs, orphaned events, and stale stubs.\n\n### Fixed\n- Fixed incomplete `server.properties` files being used as-is: a file that exists but is empty or contains only a couple of options (for example, the short defaults shipped by hosting panels such as Pterodactyl) is now completed with every missing option instead of running as-is.\n- Fixed a RakLib session use-after-free with a single owner-side teardown, and an inverted TagGuard ownership that double-freed saved NBT lists.\n- Fixed furnace interaction for the 0.15 client: furnaces open as generic container windows, the furnace opens before held-item handling, and the full furnace spawn compound is shipped.\n- Fixed chest lids animating with the era-correct block event.\n- Fixed plugin-cancelled block edits desyncing the client: the client is now told the truth when a plugin cancels its block edit, and empty read-backs in Lua event hooks are guarded.\n- Fixed the burning overlay not appearing on clients.\n- Fixed fire extinguishing only for submerged faces; water now puts fire out on any touch.\n- Fixed time synchronization by pinning the world clock where the client actually binds it.\n- Fixed the player list keeping entries of players who already quit.\n- Fixed the container open wire flow to match the protocol-84 reference, honored container close window ids, and broadcast slot changes to every co-viewer.\n- Fixed chunk re-streams losing tile actors: tiles are rescanned on every stream so re-sent blocks keep their chests, furnaces, and signs.\n- Fixed a section nibble index desync that corrupted block data.\n- Fixed biome layer races, trees cut at chunk borders, and wrong log data.\n- Fixed blocks being placeable inside entity hitboxes.\n- Fixed bucket pours and fills on the 0.15 bucket wire form.\n- Fixed container drops spilling in every game mode and removed the drop-magnet jitter.\n- Fixed snow layer behavior when waking generated liquids.\n- Fixed creative combat: attack knockback, the victim self-view hurt flash, the block-tap bow pose, phantom arrow flashes near players, and hotbar relinks so creative equipment takes effect correctly.\n- Fixed the Windows console reader stdin wait loop and made process exit no longer block on the console reader.\n- Fixed the Windows build with MSVC: C99 compound literals in Chunk.cpp and a BlockID equality ambiguity flagged by clang and MSVC.\n- Fixed CI build triggers and dropped the optional LevelDB dependency.\n- Fixed the missing generator include path in `build_local.sh`.\n\n### Notes\n- Compared against Beta v1.0.2.\n- Furnace generation in the vanilla world generator is disabled because a crash when touching a naturally generated furnace is being investigated.\n- Generated structures currently do not contain chests; chests will be added in a future update.\n- This update does not include major plugin API changes.\n- Target client: Minecraft: Pocket Edition 0.15.x.\n- Network protocol: 84.\n- CurseStone is server software and does not implement every vanilla Minecraft mechanic.\n- Some features may require additional in-game testing to verify complete client compatibility.\n",
+    "assets": [
+      {
+        "name": "CurseStone-v1.0.3-beta-android-arm64.zip",
+        "size": 13834764,
+        "downloads": 21,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.3-beta/CurseStone-v1.0.3-beta-android-arm64.zip"
+      },
+      {
+        "name": "CurseStone-v1.0.3-beta-linux-arm64.zip",
+        "size": 30132187,
+        "downloads": 4,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.3-beta/CurseStone-v1.0.3-beta-linux-arm64.zip"
+      },
+      {
+        "name": "CurseStone-v1.0.3-beta-linux-x86_64.zip",
+        "size": 30993537,
+        "downloads": 8,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.3-beta/CurseStone-v1.0.3-beta-linux-x86_64.zip"
+      },
+      {
+        "name": "CurseStone-v1.0.3-beta-windows-x86_64.zip",
+        "size": 13464311,
+        "downloads": 3,
+        "url": "https://github.com/CurseStoneORG/CurseStone/releases/download/v1.0.3-beta/CurseStone-v1.0.3-beta-windows-x86_64.zip"
+      }
+    ]
+  }
+]

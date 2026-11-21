@@ -10,16 +10,19 @@ import { ReleaseBadge, registerReleases } from '../components/ReleaseSheet.js';
 const SKELETON_TILES = 4;
 
 function Tile(release, isLatest) {
+  // Enlace real a la página estática de la release (rastreable por buscadores y
+  // accesible sin JavaScript). El clic se intercepta en ReleaseSheet para abrir
+  // la hoja de detalle dentro de la SPA; si falla, el enlace navega con normalidad.
   return html`
     <li>
-      <button class="embed release-tile" type="button" data-open-release="${escapeAttr(release.tag)}" aria-label="${t('release.open')} ${escapeAttr(release.tag)}">
+      <a class="embed release-tile" href="/releases/${escapeAttr(release.tag)}/" data-open-release="${escapeAttr(release.tag)}" aria-label="${t('release.open')} ${escapeAttr(release.tag)}">
         <span class="embed-title">
           <span class="release-version">${escapeHtml(release.tag)}</span>
           ${ReleaseBadge(release, isLatest)}
         </span>
         ${release.name !== release.tag ? html`<span class="embed-name">${escapeHtml(release.name)}</span>` : ''}
         <span class="release-tile-date">${formatDate(release.publishedAt)}</span>
-      </button>
+      </a>
     </li>`;
 }
 
