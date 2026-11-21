@@ -95,8 +95,12 @@ export function openReleaseSheet(release, mode = 'full') {
 }
 
 // Un solo listener global: cualquier elemento con data-open-release abre la hoja de esa release.
+// Los disparadores que son enlaces (href a /releases/<tag>/) cancelan la navegación solo
+// cuando la release está en memoria; si no lo está, el enlace funciona con normalidad.
 document.addEventListener('click', event => {
   const trigger = event.target.closest('[data-open-release]');
   const release = trigger && registry.get(trigger.dataset.openRelease);
-  if (release) openReleaseSheet(release, trigger.dataset.mode || 'full');
+  if (!release) return;
+  if (trigger.tagName === 'A') event.preventDefault();
+  openReleaseSheet(release, trigger.dataset.mode || 'full');
 });

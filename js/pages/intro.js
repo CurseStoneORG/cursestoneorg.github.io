@@ -122,7 +122,8 @@ function News() {
         ${NEWS_KEYS.map(key => html`<li>${t(`intro.news.${key}`)}</li>`)}
       </ul>
       <p class="intro-news-note">${t('intro.news.note')}</p>
-      <p><a href="#releases">${t('intro.news.link')}</a></p>
+      <!-- Página estática de la release (actualizar junto con intro.news si cambia la versión). -->
+      <p><a href="/releases/v1.0.3-beta/">${t('intro.news.link')}</a></p>
     </section>`;
 }
 

@@ -1,0 +1,11 @@
+{
+  "name": "cursestoneorg.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio oficial de CurseStone (GitHub Pages).",
+  "scripts": {
+    "generate:releases": "node tools/generate-releases.mjs",
+    "generate:releases:offline": "node tools/generate-releases.mjs --offline"
+  }
+}

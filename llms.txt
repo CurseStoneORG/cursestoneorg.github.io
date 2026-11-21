@@ -4,9 +4,9 @@
 
 ## Proyecto
 
-- [Sitio oficial](https://cursestone.pages.dev/): presentación, contribuidores, redes y documentación
+- [Sitio oficial](https://cursestoneorg.github.io/): presentación, releases, contribuidores, redes y documentación
+- [Releases](https://cursestoneorg.github.io/releases/): versiones publicadas con sus notas y archivos
 - [Repositorio en GitHub](https://github.com/CurseStoneORG/CurseStone): código fuente (rama stable)
-- [Releases](https://github.com/CurseStoneORG/CurseStone/releases): versiones publicadas
 
 ## Documentación
 
